@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+	<Resource name="jdbc/gamehours_db" auth="Container" type="javax.sql.DataSource"
+		username="root" password="" driverClassName="com.mysql.jdbc.Driver"
+		url="jdbc:mysql://localhost:3306/gamehours_db?characterEncoding=UTF-8"
+		maxActive="24" maxIdle="4" poolPreparedStatements="true"
+		maxOpenPreparedStatements="100" />
+</Context>

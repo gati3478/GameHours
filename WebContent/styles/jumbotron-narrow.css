@@ -1,0 +1,23 @@
+/* Space out content a bit */
+body {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.not_nav {
+	width: 700px;
+}
+
+.container-narrow>hr {
+	margin: 30px 0;
+}
+
+.jumbotron {
+	text-align: center;
+	border-bottom: 1px solid #e5e5e5;
+}
+
+.withmarginbtn {
+	margin-top: 40px;
+	margin-left: 10px;
+}

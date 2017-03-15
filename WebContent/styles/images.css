@@ -1,0 +1,24 @@
+body {
+	background-color: #eee;
+}
+
+.div_btn_label {
+	margin-top: 120px;
+}
+
+.withmargins {
+	margin-top: 10px;
+}
+
+.screenshot {
+	width: 100%;
+	margin-bottom: 5px;
+}
+
+.btn-block {
+	margin-bottom: 47px;
+}
+
+.bigthumb {
+	width: 90%;
+}

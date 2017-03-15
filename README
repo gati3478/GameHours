@@ -1,0 +1,33 @@
+[Wiki] [როგორ დავიწყოთ პროექტზე მუშაობა]
+1. პროექტი დაკლონეთ GitHub-იდან და Eclipse-ში (ან რომელიმე სხვა Java EE გარემოში) შექმენით იმავე სახელის (GameHours) დინამიკური ვებ პროექტი (Dynamic Web Project) ან Eclipse-ის შემთხვევაში გამოიყენეთ EGit plugin.
+
+2. პროექტს მოყვება lib საქაღალდე (WEB-INF-ში): ამ საქაღალდიდან tomcat-juli.jar-ის გარდა ყველა უნდა იყოს tomcat/lib საქაღალდეში (რათა სერვერს ჰქონდეს წვდომა ხსენებულ ბიბლიოთეკებთან) და tomcat-juli.jar-იანად უნდა იყოს პროექტის Build Path-ში გაწერილი (რათა development-ის დროს გქონდეთ წვდომა).
+
+3. პროექტში არსებული ტესტებისათვის საჭიროა JUnit-ის ბიბლიოთეკის Build Path-ში გაწერა (ამისათვის შეგიძლიათ უბრალოდ რაიმე JUnit Test Case დაამატოთ).
+
+4. WebContent/META-INF საქაღალდეში მყოფ context.xml ფაილ-ში (რომელიც Connection Pool-ის პარამეტრებს წარმოადგენს) მონაცემთა ბაზის მომხმარებლის სახელი და/ან პაროლი სასურველი მონაცემებით უნდა შეცვალოთ. სასურველია ფაილს მიუთითოთ git update-index --assume-unchanged <file>, რათა სხვა კოლაბორატორებთან ამ ფაილზე მუდმივი კონფლიქტი არ მოხდეს.
+
+5. WebContent/WEB-INF საქაღალდეში app.properties ფაილ-ში (რომელიც Data Storage-ის მისამართს ინახავს, ჩვენს შემთხვევაში storage საქაღალდისას) storage-ის მისამართი შეცვალეთ რეალური მისამართით (C:\ . . .\GameHours\storage). სასურველია ფაილს მიუთითოთ git update-index --assume-unchanged <file>, რათა სხვა კოლაბორატორებთან ამ ფაილზე მუდმივი კონფლიქტი არ მოხდეს.
+P.S. Windows-ის სისტემებზე მისამართში ერთი "\"-ის (სეპარატორის) ნაცვლად ორი ცალი უნდა იყოს (C:\\ . . . \\GameHours\\storage).
+
+6. DBInfo.java ფაილში კონსტანტების მნიშვნელობები - მონაცემთა ბაზის მომხმარებლის სახელი და/ან პაროლი სასურველი მონაცემებით უნდა შეცვალოთ. სასურველია ფაილს მიუთითოთ git update-index --assume-unchanged <file>, რათა სხვა კოლაბორატორებთან ამ ფაილზე მუდმივი კონფლიქტი არ მოხდეს.
+
+7. თანმიმდევრობით გაუშვით შემდეგი SQL სკრიპტები: database_schema.sql და database_sample_.sql.
+
+--------
+
+[Wiki] [How To Start Working on the Project]
+1. Clone the project from GitHub and make a new Dynamic Web Project in Eclipse (or any other Java EE IDE) with the same name (GameHours) or just use EGit plugin in case of Eclipse.
+
+2. Project comes with "lib" folder (in WEB-INF): everything except tomcat-juli.jar should be in tomcat/lib folder (so that the server can access those libraries) and everything including tomcat-juli.jar should be included in project's Build Path (so that you can access them during development process).
+
+3. For existing tests project requires JUnit library to be included in Build Path (you could easyly just add a JUnit Test Case file).
+
+4. Username and password for database should be changed with appropriate values in context.xml file located in WebContent/META-INF folder (which represents Connection Pool parameters). To avoid file consistency problem with other collaborators it is advised to apply git update-index --assume-unchanged <file> for this file.
+
+5. Disk path for storage location should be changed with the real path in app.properties file located in WebContent/WEB-INF folder (which stores Data Storage location, in our case it's "storage" folder). To avoid file consistency problem with other collaborators it is advised to apply git update-index --assume-unchanged <file> for this file.
+P.S. On Windows systems the disk path should have two "\" (seperator) symbols instead of one (C:\\ . . . \\GameHours\\storage).
+
+6. Username and password constants for database should be changed with appropriate values in DBInfo.java file. To avoid file consistency problem with other collaborators it is advised to apply git update-index --assume-unchanged <file> for this file.
+
+7. Execute the following SQL scripts in this order: database_schema.sql and then database_sample.sql.

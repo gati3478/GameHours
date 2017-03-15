@@ -1,0 +1,36 @@
+body {
+	background-color: #eee;
+}
+
+.lower {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.withmargins {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.nav-tabs {
+	margin-top: 10px;
+}
+
+.jumbotron {
+	background-color: #F8F8F8;
+}
+
+.bigthumb {
+	width: 90%;
+}
+
+.withmargins2 {
+	margin-left: 10px;
+	margin-top: 30px;
+	margin-bottom: 10px;
+}
+
+#platform-stats {
+	width:95%;
+	margin:auto;
+}
